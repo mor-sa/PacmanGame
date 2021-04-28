@@ -29,8 +29,8 @@ The game is built according to the instruction given by course staff.
 
 ![image](https://user-images.githubusercontent.com/62620992/116438671-5795fa80-a857-11eb-92d9-ec9f0367ae09.png)
 * Game ends when:
- * Win: if pacman eats all the food on the board or time's up and the score is above 100 points.
- * Lose: if pacman loses all it's life (Loser) or time's up and the score is below 100 poins (You can do better...)
+    * Win: if pacman eats all the food on the board or time's up and the score is above 100 points.
+    * Lose: if pacman loses all it's life (Loser) or time's up and the score is below 100 poins (You can do better...)
 
 ## Special Functionality
 We've added the following special functionality:
