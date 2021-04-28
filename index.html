@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--LINKS TO CSS-->
+		<link rel="stylesheet" href="styles/login.css">
+		<link rel="stylesheet" href="styles/game.css">
+		<link rel="stylesheet" href="styles/style.css">
+		<link rel="stylesheet" href="styles/settings.css">
+		<link rel="stylesheet" href="styles/footer.css">
+		<link rel="stylesheet" href="styles/home.css">
+		<link rel="stylesheet" href="styles/register.css">
+		<link rel="stylesheet" href="styles/about.css">
+		
+		
+
+		<!--LINKS TO ELSE-->
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+		<meta content="utf-8" http-equiv="encoding">
+		<title> Pacman B&M</title>
+		<link rel="icon" href="assets/images/icon.ico">
+	</head>
+
+	<body>
+		<div id="header-container">
+			<!--HEADER-->
+			<header>
+				<center>
+					<img id="logo3" src="assets/images/title.png">
+				</center>
+				<h3 id="personal_details">Ben Margalit & Mor Saranga</h3>
+			</header>
+		</div>
+
+		<!--MENU BAR-->
+		<div id="Menu-container">
+			<ul id="menu">	
+				<li><button id="home-menu-btn" class="btn1" data-text="color" onClick="switchScreens(`home-screen`)"> Home</button></li>
+				<li><button id="register-menu-btn" class="btn1" data-text="color" onClick="switchScreens(`register-screen`)"> Register</button></li>
+				<li><button id="login-menu-btn" class="btn1" data-text="color" onClick="switchScreens(`Login-screen`)"> Login</button></li>
+				<li><button id="about-menu-btn" class="btn1" data-text="color"> About</button></li>
+			</ul>
+		</div>
+
+		<!--ABOUT-->
+		<div id="about-modal" class="modal">
+			<div id="about-content" class="modal-content">
+				<span id="about-close-btn" class="close-btn1">&times;</span>
+				<h2 id="about-us-title" class="about-title">About Us</h2>
+				<p id="about-us-p" class="about-text">This Game was made by Ben Margalit and Mor Saranga</p>
+				<br>
+				<div class="image-container">
+					<center>
+						<img class="modal-img" src="assets/images/us.jpg" width=300px>
+					</center>
+				</div>
+				<br>
+				<h2 class="about-title">Usages</h2>
+				<p id="about-usage" class="about-text">We used Jquery Validation plugin to validate the Register and Login forms.</p>
+				<br>
+				<h2 class="about-title">Difficulties</h2>
+				<p id="about-difficulties1" class="about-text"># Using the Jquery Validation</p>
+				<p id="about-difficulties2" class="about-text"># Ghosts insertion to the pacman board</p>
+			</div>
+		</div>
+
+		<!--CONTENT-->
+		<div id="content-container">
+
+			<!--Home-->
+			<div id="home-screen" class="screen">
+				<img id="logo2" src="assets/images/home2.png">
+				</br>
+				<div class="home-button-container">
+					<button class=btn1 id="btn-register" onClick="switchScreens(`register-screen`)"><span class="btn1-text">Register</span></button>
+					<button class=btn1 id="btn-Login" onClick="switchScreens(`Login-screen`)"><span class="btn1-text">Login</span></button>
+				</div>
+			</div>
+
+			<!--Register-->
+			<div id="register-screen" class="screen">
+				<form id ="register-form">
+					<div class="register-container">
+						<h2 class="form-part">Register</h2>
+						<table id="register-table" align="center">
+							<tr>
+								<th class="form-part">
+									<label><b>Username:</b></label>
+								</th>
+								<th class="form-part">
+									<input class="input-text" id="username-input" type="text" autocomplete="false" placeholder="Enter user name" name="username" required>
+								</th>
+							</tr>
+							<tr>
+								<th class="form-part">
+									<label><b>Password:</b></label>
+								</th>
+								<th class="form-part">
+									<input class="input-text" id="password-input" type="password" placeholder="Enter Password" name="password" required>
+								</th>
+							</tr>
+							<tr>
+								<th class="form-part">
+									<label><b>Full name:</b></label>
+								</th>
+								<th class="form-part">
+									<input class="input-text" id="fullname-input" type="text" placeholder="Enter Full name" name="fullname" required>
+								</th>
+							</tr>
+							<tr>
+								<th class="form-part">
+									<label><b>Email:</b></label>
+								</th>
+								<th class="form-part">
+									<input class="input-text" id="email-input" type="email" placeholder="Enter Email" name="email" required>
+								</th>
+							</tr>
+							<tr>
+								<th class="form-part">
+									<label><b>Birth Date:</b></label>
+								</th>
+								<th class="form-part">
+									<input class="input-text" id="birth-date-input" type="date" name="birth-date" id="birth-date" value="1950-01-01" min="1900-01-01" max="2021-01-01" required>
+								</th>
+							</tr>
+						</table>
+						<input class="btn1" id="submit-btn-register" type="submit" value="Register" name="submit-btn">
+					</div>
+				</form>
+			</div>
+
+			<!--Login-->
+			<div id="Login-screen" class="screen">
+				<form id ="login-form">
+					<div class="login-container">
+						<h2>Log In</h2>
+						<table id="login-table" align="center">
+							<tr>
+								<th class="form-part">
+									<label><b>Username</b></label>
+								</th>
+								<th class="form-part">
+									<input class="input-text" type="text" placeholder="Enter user name" name="username" id="username" required>
+								</th>
+							</tr>
+							<tr>
+								<th class="form-part">
+									<label><b>Password</b></label>
+								</th>
+								<th class="form-part">
+									<input class="input-text" type="password" placeholder="Enter Password" name="password" id="password" required>
+								</th>
+							</tr>
+						</table>
+					  <input class="btn1" type="submit" id="submit-login" class="loginBtn" value="Log In">
+					  <br>
+					  <a onclick="switchScreens('register-screen')">Don't have an account yet?</a>
+					</div>
+				</form>
+			</div>
+
+					
+			<!--Game-->
+			<div id="game-screen" class="screen">
+
+				<!--Settings-->
+				<div id="settings-change">
+					<form id ="settings-form">
+						<div class="settings-container">
+							<h2>Game Settings</h2>
+							<label><b>Choose your game controlers:</b></label>
+							<br>
+							<br>
+							<ul id="keyboards-select">
+								<li>
+									<input class="keyboard-option" type="button" value="⇧" placeholder="Enter Up key" name="moveUpBtn" id="moveUpBtn" onclick="updateSettingsKeys(`UP`)" required>
+								</li>
+								<br>
+								<li>
+									<input class="keyboard-option" type="button" value="⇦" placeholder="Enter Left key" name="moveLeftBtn" id="moveLeftBtn"onclick="updateSettingsKeys(`LEFT`)" required>
+								</li>
+								<li>
+									<img src="assets/images/0lives.png" width="45px">
+								</li>								
+								<li>
+									<input class="keyboard-option" type="button" value="➪" placeholder="Enter Right key" name="moveRightBtn" id="moveRightBtn" onclick="updateSettingsKeys(`RIGHT`)" required>
+								</li>	
+								<br>
+								<li>
+									<input class="keyboard-option" type="button" value="⇩" placeholder="Enter Down key" name="moveDownBtn" id="moveDownBtn"onclick="updateSettingsKeys(`DOWN`)" required>
+								</li>
+							</ul>
+							<br>
+							<label><b>Number of Food points:</b></label>
+							<br>
+							<label>50</label>
+							<input type="range" id="food-points-scale" name="foodPointsScale" min="50" value="60" max="90" step="1" onchange="setValFromScale('food-points-label','food-points-scale');updateSettings(`FOOD`);" required>
+							<label>90</label>
+							<br>
+							<label id="food-points-label" > </label>
+							<br>
+							<label><b>Select colors of food points: </b></label>
+							<br>
+							<label> Select color for 5 points ball: </label>
+							<input class="color-set" type="color" id="5-point-color" value="#dc143c" name="pointsColor5" onchange="updateSettings(`COLOR5`)" required>
+							<br>
+							<label> Select color for 15 points ball: </label>
+							<input class="color-set" type="color" id="15-point-color" value="#00FFFF" name="pointsColor15" onchange="updateSettings(`COLOR15`)" required>
+							<br>
+							<label> Select color for 25 points ball: </label>
+							<input class="color-set" type="color" id="25-point-color" value="#7FFF00" name="pointsColor25" onchange="updateSettings(`COLOR25`)" required>
+							<br>
+							<br>
+							<label><b> Select the time duration the game: </b></label>
+							<br>
+							<input type="range" id="game-time-scale" name="gameTimeScale" min="60" value="60" max="360" step="1" onchange="setValFromScale('game-time-label','game-time-scale');updateSettings(`TIME`);" required>
+							<br>
+							<label id="game-time-label" > </label>
+							<br>
+							<label><b> Selct number of ghosts: </b></label>
+							<br>
+							<input type="range" id="monsters-scale" name="monstersScale" min="1" value="2" max="4" step="1" onchange="setValFromScale('monsters-label','monsters-scale');updateSettings(`MONSTERS`);" required>
+							<br>
+							<label id="monsters-label" > </label>
+							<br>
+						</div>
+					</form>
+					<div id="settings-btns-container">
+						<input class="btn1" type="submit" id="submit-settings" value="Start Game" form="settings-form">
+						<button class="btn1" id="randomBtn" onclick="randomValues()">Random</button>
+					</div>
+				</div>
+				<div id="game-container">
+					<div id="game-content">
+						<div id="show-info">
+							<div id="username-show" class="show-info-content">
+								<label>USERNAME: </label>
+								<label id="username_title"> </label>
+							</div>
+							<div id="score-show" class="show-info-content">
+								<label for="lblScore-text">SCORE: </label>
+								<label id="lblScore_val" type="text"></label>
+							</div>
+							<div id="time-show" class="show-info-content">
+								<label for="lblTime">TIME: </label>
+								<label id="lblTime_val" type="text"></label>
+								
+							</div>
+							<!-- <div id="countdown-show" class="show-info-content">
+								<label for="timer">TIMER: </label>
+								<label id="timer" type="text"></label>
+							</div> -->
+							<div id="lives-show" class="show-info-content">
+								<label id="lives_label">LIVES: </label>
+								<img id="lives_img" src="assets/images/5lives.png">
+							</div>
+						</div>
+						<br>
+						<div id="game">
+							<canvas id="canvas" width="850" height="600"></canvas>
+						</div>
+					</div>
+					<div id="settings-show">
+							<h1>Your Settings</h1>
+							<br>
+							<label>Chosen Keyboards:</label>
+							<br>
+							<ul id="show-keys-chosen-list">
+								<li id="show-key-up-chosen">
+									<label id="show-key-up-chosen-name">Up:</label>
+									<label id="show-key-up-chosen-val"></label>
+								</li>
+								<br>
+								<li id="show-key-left-chosen" >
+									<label id="show-key-left-chosen-name">Left:</label>
+									<label id="show-key-left-chosen-val"></label>
+								</li>
+								<br>
+								<li id="show-key-right-chosen">
+									<label id="show-key-right-chosen-name">Right:</label>
+									<label id="show-key-right-chosen-val"></label>
+								</li>
+								<br>
+								<li id="show-key-down-chosen">
+									<label id="show-key-down-chosen-name">Down:</label>
+									<label id="show-key-down-chosen-val"></label>
+								</li>
+							</ul>
+						<table id="set-show-table" align="center">
+							<tr>
+								<th>
+									<label id="game-time-name">Game Time:</label>
+								</th>
+								<th>
+									<label id="game-time-val"></label>
+								</th>
+							</tr>
+							<tr>
+								<th>
+									<label id="total-food-count-name">Total num of food:</label>
+								</th>
+								<th>
+									<label id="total-food-count-val"></label>
+								</th>
+							</tr>
+							<tr>
+								<th>
+									<label id="total-ghosts-count-name">Total num of ghosts:</label>
+								</th>
+								<th>
+									<label id="total-ghosts-count-val"></label>
+								</th>
+							</tr>
+							<tr>
+								<th>
+									<label id="5-points-color-name">5 points:</label>
+								</th>
+								<th>
+									<input class="color-set" id="5-points-color-val" type="color" disabled>
+								</th>
+							</tr>
+							<br>
+							<tr>
+								<th>
+									<label id="15-points-color-name">15 points:</label>
+								</th>
+								<th>
+									<input class="color-set" id="15-points-color-val" type="color" disabled>
+								</th>
+							</tr>
+							<br>
+							<tr>
+								<th>
+									<label id="25-points-color-name">15 points:</label>
+								</th>
+								<th>
+									<input class="color-set" id="25-points-color-val" type="color" disabled>
+								</th>
+							</tr>
+						</table>
+						<br>
+						<center>
+							<img id="sound-off-img" class="sound-imgs" src="assets/images/soundOff.png" onclick="changeSound()">
+							<img id="sound-on-img" class="sound-imgs" src="assets/images/soundOn.png" onclick="changeSound()">
+						</center>
+						<br>
+						<button id="new-game-set-show" class="btn1" onclick="newGameShowSettings()">New Game</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="losing-ghost-modal" class="modal">
+			<div id="losing-ghost-modal-content" class="modal-content-end">
+					<span id="close-ghost-lose-btn" class="close-btn2">&times;</span>
+					<h2 id="lose-ghost-text" class="end-text">Loser!</h2>
+					<label id="losing-ghost-score-text" class="end-text">Your Score:</label>
+					<label id="losing-ghost-score-val" class="end-text"></label>
+					<br>
+					<button id="new-game-losing-ghost" class="btn3" onclick="newGameShowSettings()">New Game</button>
+			</div>
+		</div>
+		<div id="win-time-modal" class="modal">
+			<div id="win-time-modal-content" class="modal-content-end">
+				<span id="close-win-time-btn" class="close-btn2">&times;</span>
+				<h2 id="win-time-text" class="end-text">Winner!</h2>
+				<br>
+				<label id="win-time-score-text" class="end-text">Your Score: </label>
+				<label id="win-time-score-val" class="end-text"></label>
+				<br>
+				<button id="new-game-win-time" class="btn3" onclick="newGameShowSettings()">New Game</button>
+			</div>
+		</div>
+		<div id="lose-time-modal" class="modal">
+			<div id="lose-time-modal-content" class="modal-content-end">
+				<span id="close-lose-time-btn" class="close-btn2">&times;</span>
+				<label id="lose-time-score-text1" class="end-text">You can do better than</label>
+				<label id="lose-time-score-val" class="end-text"></label>
+				<label id="lose-time-score-text2" class="end-text"> points</label>
+				<br>
+				<button id="new-game-win-lose" class="btn3" onclick="newGameShowSettings()">New Game</button>
+			</div>
+		</div>
+
+		<!--FOOTER-->
+		<div id="div-footer">
+			<footer id="footer-cotainer">
+				<div id="footer-left" class="footer-content">
+					<h6>About</h6>
+					<p>A Pacman game we made in Web Course.</p>
+					<p> We used Javascript, Jquery, HTML and CSS.</p>
+				</div>
+				<div id="footer-mid" class="footer-content">
+					<h6>Contact Us</h6>
+					<br>
+					<a id="mail-ben" class="mail-us" href="mailto:benmarga@post.bgu.ac.il">
+						<img class="mail-logo" src="assets/images/mail-ben.png">
+						<p class="mail-details">benmarga@post.bgu.ac.il</p>
+					</a>
+					<br>
+					<a id="mail-mor" class="mail-us" href="mailto:morlisa@post.bgu.ac.il">
+						<img class="mail-logo" src="assets/images/mail-mor.png">
+						<p class="mail-details">morlisa@post.bgu.ac.il</p>
+					</a>
+				</div>
+				<div id="footer-right" class="footer-content">
+					<h6>Social Media</h6>
+					<div id="ben-info">
+						<h4 id="names-ben"> Ben Margalit</h4>
+						<ul class="social-links">
+							<li>
+								<a href="https://www.linkedin.com/">
+									<img class="contact-logo" id="linkein-logo-ben" src="assets/images/linkedin-ben.png" >
+								</a>
+							</li>
+							<li>
+								<a href="https://www.facebook.com/ben.margalit.21">
+									<img class="contact-logo" id="facebook-logo-ben" src="assets/images/facebook-ben.png">
+								</a>
+							</li>
+							<li>
+								<a href="https://www.instagram.com/benmargalit21/">
+									<img class="contact-logo" id="instagram-logo-ben" src="assets/images/instagram-ben.png">
+								</a>
+							</li>
+							<li>
+								<a href="https://github.com/benmarga">
+									<img class="contact-logo" id="github-logo-ben" src="assets/images/github-ben.png">
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div id="mor-info">
+						<h4 id="names-mor"> Mor Saranga</h4>
+						<ul class="social-links">
+							<li>
+								<a href="https://www.linkedin.com/in/mor-saranga/">
+									<img class="contact-logo" id="linkein-logo-mor" src="assets/images/linkedin-mor.png">
+								</a>
+							</li>	
+							<li>
+								<a href="https://www.facebook.com/mor.saranga">
+									<img class="contact-logo" id="facebook-logo-mor" src="assets/images/facebook-mor.png">
+								</a>
+							</li>
+							<li>
+								<a href="https://www.instagram.com/mor_sa/">
+									<img class="contact-logo" id="instagram-logo-mor" src="assets/images/instagram-mor.png">
+								</a>
+							</li>
+							<li>
+								<a href="https://github.com/mor-sa">
+									<img class="contact-logo" id="github-logo-mor" src="assets/images/github-mor.png">
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+		<!--LINKS TO JS-->
+		<script type="text/javascript" src="scripts/jquery-3.4.1.slim.min.js"></script>
+		<script type="text/javascript" src="scripts/sounds.js"> </script>
+		<script type="text/javascript" src="scripts/doll.js"> </script>
+		<script type="text/javascript" src="scripts/board.js"> </script>
+		<script type="text/javascript" src="scripts/pacman.js"> </script>
+		<script type="text/javascript" src="scripts/ghost.js"> </script>
+		<script type="text/javascript" src="scripts/food.js"> </script>
+		<script type="text/javascript" src="scripts/jquery-2.1.3.min.js"></script>
+		<script type="text/javascript" src="scripts/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="scripts/additional-methods.min.js"></script>
+		<script type="text/javascript" src="scripts/app.js"></script>
+		<script type="text/javascript" src="scripts/menu.js"> </script>
+		<script type="text/javascript" src="scripts/register.js"> </script>
+		<script type="text/javascript" src="scripts/login.js"> </script>
+		<script type="text/javascript" src="scripts/about.js"> </script>
+		<script type="text/javascript" src="scripts/settings.js"> </script>
+
+	</body>
+</html>

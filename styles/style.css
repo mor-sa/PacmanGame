@@ -1,0 +1,161 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Lato:300,400,700');
+
+html{
+    background: url("../assets/images/bg2.jpeg");
+}
+
+#header-container{
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    height: 130px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+body{
+    background-color:#1e202b;
+    max-width: 98%;
+    max-height: 100%;
+    justify-content: center;
+    align-items: center;
+	color: #eee;
+	font-family: 'Lato', sans-serif;
+	font-size: 62.5%;
+}
+
+#logo3{
+    width: 350px;
+    height: 100px;
+    text-align: center;
+    justify-content: center;
+}
+
+#personal_details{
+    vertical-align:top;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    letter-spacing:2px;
+	justify-content: center;
+    text-align: center;
+    padding-bottom: 20px;
+
+}
+
+#Menu-container{
+    margin: 0;
+    background-color: #1e202b;
+    height: 60px;
+    padding-top: 20px;
+}
+
+#Menu-container > #menu{
+    margin: 0;
+    padding-top: 20px;
+    background-color: #1e202b;
+    padding: 0 0px;
+    height: 60px;
+    line-height: 60px;
+	font-size: 2em;
+	font-weight: 300;
+    text-align: center;
+}
+
+#Menu-container > #menu.fixed {
+    background-color: #1e202b;
+    z-index: 10000;
+    top: 0;
+    left:0;
+    right: 0;;
+    position: fixed;
+}
+
+#Menu-container > #menu > li{
+    display: inline-block;
+    padding: 0px;
+}
+
+#game{
+    width:1100px;
+}
+
+.btn1{
+    text-align: center;
+    width: max-content;
+    color: rgba(255,255,255,1);
+	background: none;
+	border-radius: 0;
+	padding: 0.5em 4em;
+	letter-spacing: 0.35em;
+	font-size: 0.7em;
+	transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+	margin: 1em;
+    box-shadow: inset 0 0 1em rgba(0,170,170,0.5), 0 0 1em rgba(0,170,170,0.5);
+	border: #0dd solid 2px;
+    text-transform: uppercase;
+}
+
+.btn1:hover{
+    display: inline-block;
+    background-color: #0dd;
+    box-shadow: inset 0 0 0 rgba(0,170,170,0.5), 0 0 1.5em rgba(0,170,170,0.7);
+}
+
+.btn:focus{
+    display: inline-block;
+    background-color: #0dd;
+    box-shadow: inset 0 0 0 rgba(0,170,170,0.5), 0 0 1.5em rgba(0,170,170,0.7);
+}
+
+.btn:visited{
+    display: inline-block;
+    background-color: #0dd;
+    box-shadow: inset 0 0 0 rgba(0,170,170,0.5), 0 0 1.5em rgba(0,170,170,0.7);
+}
+
+.btn1:active{
+    transform: translateY(4px);
+}
+
+h2{
+    text-align: center;
+    color: rgba(255,255,255,1);
+    letter-spacing: 0.35em;
+    font-size: 1.5em;
+    text-transform: uppercase;
+  }
+h1{
+    text-align: center;
+    color: rgba(255,255,255,1);
+    letter-spacing: 0.35em;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+#content-container{
+    background-color: #1e202b;
+    text-align: center;
+    height: max-content;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content :center;
+    font-size: 100%;
+}
+
+#register-screen{
+    display: none;
+}
+
+#Login-screen{
+    display: none;
+}
+
+#settings-screen{
+    display: none;
+}
+
+#game-screen{
+    display: none;
+}

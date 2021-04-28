@@ -1,0 +1,54 @@
+#register-screen{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#register-container{
+    width: 600px;
+    height: 700px;
+}
+
+.form-part{
+    margin : 25px;
+    padding : 20px;
+}
+
+
+.error::before{
+    content: "\a";
+    white-space: pre;
+}
+
+.error{
+    color: brown;
+}
+
+#submit-btn-register{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 60%;
+    float:center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+    font-size: 1.1em;
+    justify-content: center;
+}
+
+.input-text{
+    display: block;
+    width: 100%;
+    line-height: font-size * 2;
+    margin-bottom: font-size * 2;
+    border: none;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    background-color: inherit;
+    padding-left: 5px;
+    outline: none;
+    color: rgb(255, 255, 255);
+    font-family: 'Lato', sans-serif;
+    /* border: 1px solid rgb(255, 255, 255); */
+
+}
+
+.input-text:focus{
+  border-bottom: 2px solid rgb(0, 238, 255);
+}

@@ -1,0 +1,165 @@
+#losing-ghost-modal{
+    display: none;
+    position: fixed; 
+    z-index: 1;
+    left:0;
+    top:0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); 
+}
+
+#win-time-modal{
+    display: none;
+    position: fixed; 
+    z-index: 1;
+    left:0;
+    top:0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); 
+}
+
+#lose-time-modal{
+    display: none;
+    position: fixed; 
+    z-index: 1;
+    left:0;
+    top:0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content-end{
+    text-align: center;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 25%; 
+    height: 50%;
+    font-size: 1.5em;
+}
+
+.btn3{
+    background-color: #1b2735;
+    color: rgba(255,255,255,1);
+	background: none;
+	border-radius: 0;
+	padding: 0.5em 4em;
+	letter-spacing: 0.35em;
+	font-size: 0.7em;
+	transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+	margin: 1em;
+    box-shadow: inset 0 0 1em rgba(0,170,170,0.5), 0 0 1em rgba(0,170,170,0.5);
+	border: #0dd solid 2px;
+    text-transform: uppercase;
+}
+
+.btn3:hover{
+    display: inline-block;
+    background-color: #0dd;
+    box-shadow: inset 0 0 0 rgba(0,170,170,0.5), 0 0 1.5em rgba(0,170,170,0.7);
+}
+
+.btn3:focus{
+    display: inline-block;
+    background-color: #0dd;
+    box-shadow: inset 0 0 0 rgba(0,170,170,0.5), 0 0 1.5em rgba(0,170,170,0.7);
+}
+
+#losing-ghost-modal-content{
+    background: url("../assets/images/gameover.png");
+    background-size:     cover; 
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+
+#win-time-modal-content, #lose-time-modal-content > label{
+    color: black;
+}
+
+#win-time-modal-content{
+    background: url("../assets/images/win.png");
+    background-size:     cover; 
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+
+#lose-time-modal-content{
+    background: url("../assets/images/losetime2.jpg");
+    background-size:     cover; 
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+
+/* The Close Button */
+.close-btn2 {
+    color: #aaa;
+    text-align: right;
+    float: left;
+    font-size: 50px;
+    font-weight: bold;
+  }
+  
+.close-btn2:hover,
+.close-btn2:focus {
+    color: rgb(196, 161, 161);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#lives_img{
+    height: 15px;
+}
+
+#show-info{
+    background-image: url("../assets/images/darkbg3.png");
+    width: max-content;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-flow: row;
+}
+
+.show-info-content{
+    width: 170px;
+    float: left;
+    font-size: 1.5em;
+}
+
+.sound-imgs{
+    width: 60px;
+    height: 60px;
+}
+
+#sound-off-img{
+    display: block;
+}
+
+#sound-on-img{
+    display: none;
+}
+
+#game-container{
+    width: 70%;
+    margin: 0 auto;
+    text-align: left;
+    display: flex;
+    flex-flow: row;
+}
+
+#settings-show{
+    width: 10%;
+    float: left;
+    left:15em;
+}
+#game-content{
+    width: 90%;
+    float: left;
+    right: 5em;
+}
