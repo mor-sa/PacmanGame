@@ -102,21 +102,6 @@ function createBoard(){
 	pacman.i=pacman_cell[0];
 	pacman.j=pacman_cell[1];
 
-	while (food_remain > 0) {
-		let emptyCell = findRandomEmptyCell(board);
-		const random_food = Math.random();
-		if(random_food<=0.6){
-			board.arr[emptyCell[0]][emptyCell[1]] = "F5";
-		}
-		else if(random_food>0.6 && random_food<=0.9){
-			board.arr[emptyCell[0]][emptyCell[1]] = "F15";
-		}
-		else{
-			board.arr[emptyCell[0]][emptyCell[1]] = "F25";
-		}
-		food_remain--
-	}
-
 	// set empty for teleport
 	board.arr[0][8]="E"
 	board.arr[26][8]="E"
@@ -144,6 +129,24 @@ function createGhosts(){
 		ghost_array[i].prevCell="E"
 	}
 }
+
+function createFood(){
+	while (food_remain > 0) {
+		let emptyCell = findRandomEmptyCell(board);
+		const random_food = Math.random();
+		if(random_food<=0.6){
+			board.arr[emptyCell[0]][emptyCell[1]] = "F5";
+		}
+		else if(random_food>0.6 && random_food<=0.9){
+			board.arr[emptyCell[0]][emptyCell[1]] = "F15";
+		}
+		else{
+			board.arr[emptyCell[0]][emptyCell[1]] = "F25";
+		}
+		food_remain--
+	}
+}
+
 function Start() {
 	//init important things
 	pacman = new Pacman();
@@ -154,6 +157,7 @@ function Start() {
 	createBoard();
 	createMovingDoll();
 	createGhosts();
+	createFood();
 	gameSound.currentTime = 0;
 	gameSound.play();
 	start_time = new Date();
