@@ -19,7 +19,7 @@ The game is built according to the instruction given by course staff.
 * **Register** - a page that allows the user to register to the site, using jquery validation to make sure the inputs are valid.
 * **Login** - a page that allows the user to login, using jquery validation to make sure the inputs are valid.
 * **Settings** - a page that asks the user to select preferences for the game, such as keys to play, number of food balls, number of ghosts, time of the game, colors for the food points. There is a random button that randomly changes the prefernces.
-* **Game** - a page that has the game itself, at the top of the game it shows the username, score, time passed from the game's beginning, timer, and how many lives the user has. at the side, the user sees the preferences he has chosen and a new game button.
+* **Game** - a page that has the game itself and at the top of the game it shows: the username, score, time passed from the game's beginning, and how many lives the user has. On the side, the user sees the preferences he has chosen and a new game button.
 
 ![image](https://user-images.githubusercontent.com/62620992/116438895-9a57d280-a857-11eb-9abe-9df7ef406c37.png)
 
