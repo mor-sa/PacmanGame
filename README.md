@@ -1,9 +1,5 @@
-# Assignment2_211896535_205543606
+# Pacman Game
 Pacman game by Ben Margalit and Mor Saranga
-
-Ben Margalit: 211896535
-
-Mor Saranga: 205543606
 
 Website URL: https://web-development-environments-2021.github.io/Assignment2_211896535_205543606/
 
